@@ -87,8 +87,8 @@ include("collocation.jl")
 include("hnn.jl")
 include("multiple_shooting.jl")
 
-Flux.device(::FastLayer) = @warn "device(f::FastLayer) is a no-op: to move FastChain computations to a GPU, apply gpu(x) to the weight vector"
-Flux.gpu(::FastLayer) = @warn "device(f::FastLayer) is a no-op: to move FastChain computations to a GPU, apply gpu(x) to the weight vector"
+# Flux.device(::FastLayer) = @warn "device(f::FastLayer) is a no-op: to move FastChain computations to a GPU, apply gpu(x) to the weight vector"
+# Flux.gpu(::FastLayer) = @warn "device(f::FastLayer) is a no-op: to move FastChain computations to a GPU, apply gpu(x) to the weight vector"
 Flux.cpu(::FastLayer) = @warn "device(f::FastLayer) is a no-op: to move FastChain computations to a CPU, apply cpu(x) to the weight vector"
 
 export diffeq_fd, diffeq_rd, diffeq_adjoint
